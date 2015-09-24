@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>The Tucker-Pritchett's</title>
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css"></link>
+
+	<script src="../bower_components/jquery/dist/jquery.js"></script>
+	<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	
+	<style>
+		.container {
+		    border:1px solid lime;
+		    overflow:hidden;
+		    
+		    /* the container's height will determine the height of its slider  */
+		    height:auto; 
+		    width:500px;
+		    
+		}
+
+.btn-group{
+    position: relative;
+    vertical-align: top;
+}
+		.Cameron, .Mitchell, .Lily {
+			
+			/* complete liquid height based on the parent's height!! */
+		    height:100%;
+
+		    /* only transition on transform properties which are hardware accelerated = way better performances */
+			-webkit-transition:-webkit-transform .3s ease;
+		       -moz-transition:   -moz-transform .3s ease;
+		        -ms-transition:    -ms-transform .3s ease;
+		            transition:        transform .3s ease;
+		}
+
+		.Cameron.opened, .Mitchell.opened, .Lily.opened { 
+		    /* visible */
+		    -webkit-transform: translate(0, 0%);
+		       -moz-transform: translate(0, 0%);
+		        -ms-transform: translate(0, 0%);
+		            transform: translate(0, 0%);
+		}
+		.Cameron.closed, .Mitchell.closed, .Lily.closed { 
+		    /* completely offscreen */
+		    -webkit-transform: translate(0, -100%);
+		       -moz-transform: translate(0, -100%);
+		        -ms-transform: translate(0, -100%);
+		            transform: translate(0, -100%);
+		}
+		.Cameron, .Mitchell, .Lily {
+		    -webkit-box-sizing:border-box;
+		       -moz-box-sizing:border-box;
+		        -ms-box-sizing:border-box;
+		            box-sizing:border-box;
+
+		    padding:20px;
+		    background: pink;
+		    border:1px solid hotpink;
+		}
+
+	</style>
+</head>
+<body>
+
+<ul class="breadcrumb">
+  <li><a href="../index.html">Home</a></li>
+  <li><a href="../family/family.html">Families</a></li>
+  <li class="active">Tucker-Pritchett's</li>
+</ul>
+
+<h2>The Tucker-Pritchett's family</h2>
+<!--
+<iframe src="F:/ModernFamily/image/pri2.jpg" name="imgbox" id="imgbox" scrolling="no" style="float:left; height:29em; padding:10px; border:0;"></iframe>
+<a href="F:/ModernFamily/image/mitchell.jpg" target="imgbox">Mitchell</a><br />
+<a href="F:/ModernFamily/image/cameron.jpg" target="imgbox">Cameron</a><br />
+<a href="F:/ModernFamily/image/lily.jpg" target="imgbox">Lily</a>
+
+-->
+
+<div class="btn-group btn-group-justified" role="group" style="height:auto; ">
+
+	<div class="btn-group" role="group">
+		<button id="toggle" type="button" class="btn btn-primary" style="width:533px; display:inline-block; margin:auto;">Cameron</button>
+		<div class="container">
+		<div class="Cameron opened">
+			<p>
+				nfgnjsfjsfjsfjfshksfk
+				sgjsfj
+				dgkdgkf
+				uy9lyuklytk
+				syrkjwaryj
+				wrjtwj
+				wryj
+				wyrjke
+				ytke
+				ytk
+			</p>
+			<p>
+				nfgnjsfjsfjsfjfshksfk
+				sgjsfj
+				dgkdgkf
+				uy9lyuklytk
+				syrkjwaryj
+				wrjtwj
+				wryj
+				wyrjke
+				ytke
+				ytk
+			</p>
+			<p>
+				nfgnjsfjsfjsfjfshksfk
+				sgjsfj
+				dgkdgkf
+				uy9lyuklytk
+				syrkjwaryj
+				wrjtwj
+				wryj
+				wyrjke
+				ytke
+				ytk
+			</p>
+		</div>
+	</div>
+	</div>
+
+	<script>
+		var toggle = document.getElementById('toggle');
+		var slider = document.querySelector('.Cameron');
+
+		if(toggle){
+		toggle.addEventListener('click', toggleSlider, false);
+		}
+
+		function toggleSlider(){
+		    if (slider.classList.contains('opened')) {
+		        slider.classList.remove('opened');
+		        slider.classList.add('closed');
+		    } else {
+		        slider.classList.remove('closed');
+		        slider.classList.add('opened');
+		    }
+		}
+	</script>
+	
+
+
+
+
+
+	<div class="btn-group" role="group">
+		<button id="toggle2" type="button" class="btn btn-primary " style="width:533px; display:inline-block; margin:auto;">Mitchell</button>
+	<div class="container">
+		<div class="Mitchell opened">
+			<p>
+				althaf
+			</p>
+			<p>
+				nfgnjsfjsfjsfjfshksfk
+				sgjsfj
+				dgkdgkf
+				uy9lyuklytk
+				syrkjwaryj
+				wrjtwj
+				wryj
+				wyrjke
+				ytke
+				ytk
+			</p>
+			<p>
+				nfgnjsfjsfjsfjfshksfk
+				sgjsfj
+				dgkdgkf
+				uy9lyuklytk
+				syrkjwaryj
+				wrjtwj
+				wryj
+				wyrjke
+				ytke
+				ytk
+			</p>
+			<p>
+				nfgnjsfjsfjsfjfshksfk
+				sgjsfj
+				dgkdgkf
+				uy9lyuklytk
+				syrkjwaryj
+				wrjtwj
+				wryj
+				wyrjke
+				ytke
+				ytk
+			</p>
+		</div>
+	</div>
+	</div>
+
+	<script>
+		var toggle2 = document.getElementById('toggle2');
+		var slider2 = document.querySelector('.Mitchell');
+
+		if(toggle2){
+		toggle2.addEventListener('click', toggleSlider2, false);
+		}
+
+		function toggleSlider2(){
+		    if (slider2.classList.contains('opened')) {
+		        slider2.classList.remove('opened');
+		        slider2.classList.add('closed');
+		    } else {
+		        slider2.classList.remove('closed');
+		        slider2.classList.add('opened');
+		    }
+		}
+	</script>
+
+
+
+
+
+
+
+	<div class="btn-group" role="group">
+		<button id="toggle3" type="button" class="btn btn-primary" style="width:533px; display:inline-block; margin:auto;">Lily</button>
+	<div class="container">
+		<div class="Lily opened">
+			<p>
+				bujji
+			</p>
+			<p>
+				nfgnjsfjsfjsfjfshksfk
+				sgjsfj
+				dgkdgkf
+				uy9lyuklytk
+				syrkjwaryj
+				wrjtwj
+				wryj
+				wyrjke
+				ytke
+				ytk
+			</p>
+			<p>
+				nfgnjsfjsfjsfjfshksfk
+				sgjsfj
+				dgkdgkf
+				uy9lyuklytk
+				syrkjwaryj
+				wrjtwj
+				wryj
+				wyrjke
+				ytke
+				ytk
+			</p>
+			<p>
+				nfgnjsfjsfjsfjfshksfk
+				sgjsfj
+				dgkdgkf
+				uy9lyuklytk
+				syrkjwaryj
+				wrjtwj
+				wryj
+				wyrjke
+				ytke
+				ytk
+			</p>
+			<p>
+				nfgnjsfjsfjsfjfshksfk
+				sgjsfj
+				dgkdgkf
+				uy9lyuklytk
+				syrkjwaryj
+				wrjtwj
+				wryj
+				wyrjke
+				ytke
+				ytk
+			</p>
+
+		</div>
+	</div>
+	</div>
+
+	<script>
+		var toggle3 = document.getElementById('toggle3');
+		var slider3 = document.querySelector('.Lily');
+
+		if(toggle3){
+		toggle3.addEventListener('click', toggleSlider3, false);
+		}
+
+		function toggleSlider3(){
+		    if (slider3.classList.contains('opened')) {
+		        slider3.classList.remove('opened');
+		        slider3.classList.add('closed');
+		    } else {
+		        slider3.classList.remove('closed');
+		        slider3.classList.add('opened');
+		    }
+		}
+	</script>
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
